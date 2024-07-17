@@ -1,0 +1,90 @@
+{
+  "questions": [
+    {
+      "question": "Quel avantage préférez-vous ?",
+      "options": [
+        {
+          "text": "Livraison de repas",
+          "weights": { "Livraison de repas": 1, "Participation adhésion club de sport": 0.5, "Chèque cadeau": 0.2 }
+        },
+        {
+          "text": "Participation adhésion club de sport",
+          "weights": { "Livraison de repas": 0.5, "Participation adhésion club de sport": 1, "Chèque cadeau": 0.3 }
+        },
+        {
+          "text": "Chèque cadeau",
+          "weights": { "Livraison de repas": 0.2, "Participation adhésion club de sport": 0.3, "Chèque cadeau": 1 }
+        }
+      ]
+    },
+    {
+      "question": "Quel type de récompense aimeriez-vous recevoir ?",
+      "options": [
+        {
+          "text": "Forfait mobilité durable",
+          "weights": { "Forfait mobilité durable": 1, "Tickets restaurants": 0.5, "CESU": 0.3 }
+        },
+        {
+          "text": "Tickets restaurants",
+          "weights": { "Forfait mobilité durable": 0.5, "Tickets restaurants": 1, "CESU": 0.7 }
+        },
+        {
+          "text": "CESU",
+          "weights": { "Forfait mobilité durable": 0.3, "Tickets restaurants": 0.7, "CESU": 1 }
+        }
+      ]
+    },
+    {
+      "question": "Quelle méthode de livraison préférez-vous ?",
+      "options": [
+        {
+          "text": "Livraison de repas",
+          "weights": { "Livraison de repas": 1, "Chèque cadeau": 0.5, "Tickets restaurants": 0.2 }
+        },
+        {
+          "text": "Chèque cadeau",
+          "weights": { "Livraison de repas": 0.5, "Chèque cadeau": 1, "Tickets restaurants": 0.3 }
+        },
+        {
+          "text": "Tickets restaurants",
+          "weights": { "Livraison de repas": 0.2, "Chèque cadeau": 0.3, "Tickets restaurants": 1 }
+        }
+      ]
+    },
+    {
+      "question": "Quel est votre budget mensuel pour les avantages ?",
+      "options": [
+        {
+          "text": "50€",
+          "weights": { "Livraison de repas": 0.5, "Chèque cadeau": 0.3, "Tickets restaurants": 0.2 }
+        },
+        {
+          "text": "100€",
+          "weights": { "Livraison de repas": 0.7, "Chèque cadeau": 0.5, "Tickets restaurants": 0.5 }
+        },
+        {
+          "text": "150€",
+          "weights": { "Livraison de repas": 1, "Chèque cadeau": 0.8, "Tickets restaurants": 1 }
+        }
+      ]
+    },
+    {
+      "question": "Préférez-vous des avantages uniques ou récurrents ?",
+      "options": [
+        {
+          "text": "Uniques",
+          "weights": { "Forfait mobilité durable": 0.6, "Tickets restaurants": 0.4, "CESU": 0.5 }
+        },
+        {
+          "text": "Récurrents",
+          "weights": { "Forfait mobilité durable": 1, "Tickets restaurants": 1, "CESU": 1 }
+        },
+        {
+          "text": "Peu importe",
+          "weights": { "Forfait mobilité durable": 0.8, "Tickets restaurants": 0.8, "CESU": 0.8 }
+        }
+      ]
+    }
+  ],
+  "options": ["Livraison de repas", "Participation adhésion club de sport", "Chèque cadeau", "Forfait mobilité durable", "Tickets restaurants", "CESU"]
+}
