@@ -136,22 +136,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add the logo
     const logoImg = new Image();
-    logoImg.src = './2BRH.png'; // Assurez-vous que le chemin de l'image est correct
+    logoImg.src = './logo.png';
     logoImg.onload = () => {
-      doc.addImage(logoImg, 'PNG', 10, 10, 50, 20);
+      doc.addImage(logoImg, 'PNG', 10, 10, 25, 20);
       addContentToPDF(doc, results);
     };
   }
 
   function addContentToPDF(doc, results) {
     let yPosition = 40;
+    const smallFontSize = 10;
+    const normalFontSize = 12;
 
     // Add questions and answers
     data.questions.forEach((question, index) => {
-      doc.text(10, yPosition, `Q${index + 1}: ${question.question}`);
+      doc.setFontSize(smallFontSize);
+      doc.text(10, yPosition, `Question n${index + 1}:`);
+      doc.setFontSize(normalFontSize);
+      doc.text(35, yPosition, question.question);
       yPosition += 10;
-      doc.text(20, yPosition, `A: ${selectedOptions[index].text}`);
-      yPosition += 10;
+      doc.setFontSize(smallFontSize);
+      doc.text(10, yPosition, `Réponse:`);
+      doc.setFontSize(normalFontSize);
+      doc.text(35, yPosition, selectedOptions[index].text);
+      yPosition += 20; // Add more space between questions and answers
     });
 
     // Add the chart image
