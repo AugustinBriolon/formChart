@@ -158,7 +158,7 @@
           }]
         },
         options: {
-          indexAxis: 'y',  // This makes the bar chart horizontal
+          indexAxis: 'y',  
           scales: {
             x: {
               beginAtZero: true
@@ -176,7 +176,6 @@
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF();
 
-      // Add the logo
       const logoImg = new Image();
       logoImg.src = './data/logo.png';
       logoImg.onload = () => {
@@ -190,7 +189,6 @@
       const smallFontSize = 10;
       const normalFontSize = 12;
 
-      // Add questions and answers
       data.questions.forEach((question, index) => {
         doc.setFontSize(smallFontSize);
         doc.text(10, yPosition, `Question n${index + 1}:`);
@@ -201,15 +199,13 @@
         doc.text(10, yPosition, `Réponse:`);
         doc.setFontSize(normalFontSize);
         doc.text(35, yPosition, selectedOptions[index].text);
-        yPosition += 20; // Add more space between questions and answers
+        yPosition += 20; 
       });
 
-      // Add the chart image
       const chartCanvas = document.getElementById('resultsChart');
       const chartImg = chartCanvas.toDataURL('image/png');
       doc.addImage(chartImg, 'PNG', 10, yPosition, 180, 100);
 
-      // Save the PDF
       doc.save('results.pdf');
     }
   });
