@@ -138,6 +138,8 @@
     }
 
     function displayGraph(results) {
+      results.sort((a, b) => b.percentage - a.percentage);
+
       const graph = document.getElementById('graph');
       graph.innerHTML = '<canvas id="resultsChart"></canvas>';
 
@@ -158,10 +160,26 @@
           }]
         },
         options: {
-          indexAxis: 'y',  
+          indexAxis: 'y',
           scales: {
             x: {
-              beginAtZero: true
+              beginAtZero: true,
+              ticks: {
+                display: false
+              },
+              grid: {
+                display: false
+              }
+            },
+            y: {
+              grid: {
+                display: false
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
             }
           }
         }
@@ -176,12 +194,11 @@
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF();
 
-      const logoImg = new Image();
-      logoImg.src = './data/logo.png';
-      logoImg.onload = () => {
-        doc.addImage(logoImg, 'PNG', 10, 10, 25, 20);
-        addContentToPDF(doc, results);
-      };
+      doc.setFontSize(24);
+      doc.setTextColor(0, 0, 255);
+      doc.text('RESULTATS DU QUESTIONNAIRE', 105, 20, { align: 'center' });
+
+      addContentToPDF(doc, results);
     }
 
     function addContentToPDF(doc, results) {
@@ -189,25 +206,32 @@
       const smallFontSize = 10;
       const normalFontSize = 12;
 
+      doc.setTextColor(0, 0, 0);
+
       data.questions.forEach((question, index) => {
         doc.setFontSize(smallFontSize);
-        doc.text(10, yPosition, `Question n${index + 1}:`);
+        doc.text(30, yPosition, `Q${index + 1}:`);
         doc.setFontSize(normalFontSize);
-        doc.text(35, yPosition, question.question);
+        doc.text(50, yPosition, question.question);
         yPosition += 10;
         doc.setFontSize(smallFontSize);
-        doc.text(10, yPosition, `Réponse:`);
+        doc.text(30, yPosition, `A:`);
         doc.setFontSize(normalFontSize);
-        doc.text(35, yPosition, selectedOptions[index].text);
-        yPosition += 20; 
+        doc.text(50, yPosition, selectedOptions[index].text);
+        yPosition += 20;
       });
 
       const chartCanvas = document.getElementById('resultsChart');
       const chartImg = chartCanvas.toDataURL('image/png');
       doc.addImage(chartImg, 'PNG', 10, yPosition, 180, 100);
+      yPosition += 110;
 
-      doc.save('results.pdf');
+      const logoImg = new Image();
+      logoImg.src = './data/logo.png';
+      logoImg.onload = () => {
+        doc.addImage(logoImg, 'PNG', doc.internal.pageSize.width , doc.internal.pageSize.height , 20, 20);
+        doc.save('results.pdf');
+      };
     }
   });
-
 </script>
