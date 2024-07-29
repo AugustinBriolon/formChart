@@ -152,6 +152,9 @@
         percentage: (scores[option] / totalScores) * 100
       }));
 
+      console.log(totalScores)
+      console.log(percentages);
+
       displayGraph(percentages);
     }
 
@@ -228,7 +231,6 @@
     function addFormattedSubtitle(doc, subtitle, x, y) {
       const words = subtitle.split(' ');
 
-      // Calculer la largeur totale du sous-titre
       let totalWidth = 0;
       words.forEach(word => {
         const firstLetterWidth = doc.getTextWidth(word.charAt(0));
@@ -236,7 +238,6 @@
         totalWidth += firstLetterWidth + restOfWordWidth + doc.getTextWidth(' ');
       });
 
-      // Calculer la position de départ pour centrer le sous-titre
       let startX = (doc.internal.pageSize.width - totalWidth) / 2;
 
       words.forEach(word => {
@@ -257,15 +258,13 @@
 
     function addContentToPDF(doc, results) {
       let yPosition = 45;
-      const smallFontSize = 14;
-      const normalFontSize = 16;
+      const smallFontSize = 10;
+      const normalFontSize = 12;
 
       const img = new Image();
       img.src = './data/img.png';
       img.onload = () => {
         doc.addImage(img, 'PNG', 10, 10, 50, 20);
-        // doc.addImage(img, 'PNG', 10, 78, 12, 15)
-
 
         doc.setTextColor(0, 0, 0);
 
@@ -273,14 +272,14 @@
 
         data.questions.forEach((question, index) => {
           doc.setFontSize(smallFontSize);
-          doc.text(30, yPosition, `Question ${index + 1}:`);
+          doc.text(10, yPosition, `Question ${index + 1}:`);
           doc.setFontSize(normalFontSize);
-          doc.text(55, yPosition, question.question);
+          doc.text(30, yPosition, question.question);
           yPosition += 10;
           doc.setFontSize(smallFontSize);
-          doc.text(30, yPosition, `Réponse:`);
+          doc.text(10, yPosition, `Réponse:`);
           doc.setFontSize(normalFontSize);
-          doc.text(55, yPosition, selectedOptions[index].text);
+          doc.text(30, yPosition, selectedOptions[index].text);
           yPosition += 20;
         });
 
@@ -292,7 +291,7 @@
         const logoImg = new Image();
         logoImg.src = './data/logo.png';
         logoImg.onload = () => {
-          doc.addImage(logoImg, 'PNG', doc.internal.pageSize.width - 45, doc.internal.pageSize.height - 30, 45, 30);
+          doc.addImage(logoImg, 'PNG', doc.internal.pageSize.width - 60, doc.internal.pageSize.height - 30, 55, 30);
           doc.save('results.pdf');
         };
       };

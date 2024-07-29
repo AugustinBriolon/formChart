@@ -2,90 +2,90 @@
   "subtitle" : "AVANTAGES SOCIAUX - BIEN-ÊTRE FINANCIER",
   "questions": [
     {
-      "question": "Quel avantage préférez-vous ?",
+      "question": "Sur quels besoins et attentes de vos collaborateurs souhaiteriez-vous agir en priorité ?",
       "options": [
         {
-          "text": "Livraison de repas",
-          "weights": { "Livraison de repas": 1, "Participation adhésion club de sport": 0.5, "Chèque cadeau": 0.2 }
+          "text": "Un complément de revenus pour des activités extra-professionnelles",
+          "weights": { "Participation adhésion club de sport": 1, "Chèque-cadeau / Chèque-vacances": 1, "Forfait mobilité durable": 1, "Tickets restaurants": 1, "CESU": 1 }
         },
         {
-          "text": "Participation adhésion club de sport",
-          "weights": { "Livraison de repas": 0.5, "Participation adhésion club de sport": 1, "Chèque cadeau": 0.3 }
+          "text": "Des conseils en matière d'organisation du travail",
+          "weights": { "CESU": 1, "Tickets-restaurants": 1, "Livraison de repas": 1 }
         },
         {
-          "text": "Chèque cadeau",
-          "weights": { "Livraison de repas": 0.2, "Participation adhésion club de sport": 0.3, "Chèque cadeau": 1 }
+          "text": "Adopter un comportement responsable et durable",
+          "weights": { "Forfait mobilité durable": 1 }
         }
       ]
     },
     {
-      "question": "Quel type de récompense aimeriez-vous recevoir ?",
+      "question": "Sur quels besoins et attentes de vos collaborateurs souhaiteriez-vous agir en priorité ?",
       "options": [
         {
-          "text": "Forfait mobilité durable",
-          "weights": { "Forfait mobilité durable": 1, "Tickets restaurants": 0.5, "CESU": 0.3 }
+          "text": "Horaires de travail adaptés pour pouvoir s'occuper des enfants",
+          "weights": { "CESU": 1, "Chèque-cadeau / Chèque-vacances": 1 }
         },
         {
-          "text": "Tickets restaurants",
-          "weights": { "Forfait mobilité durable": 0.5, "Tickets restaurants": 1, "CESU": 0.7 }
+          "text": "Gagner du temps sur des activités sans valeur ajoutée",
+          "weights": { "Participation adhésion club de sport": 1, "Livraison de repas": 1 }
         },
         {
-          "text": "CESU",
-          "weights": { "Forfait mobilité durable": 0.3, "Tickets restaurants": 0.7, "CESU": 1 }
+          "text": "Une aide pour financer des besoins quotidiens ",
+          "weights": { "Participation adhésion club de sport": 1, "Chèque-cadeau / Chèque-vacances": 1, "Forfait mobilité durable": 1, "Tickets restaurants": 1, "CESU": 1 }
         }
       ]
     },
     {
-      "question": "Quelle méthode de livraison préférez-vous ?",
+      "question": "Sur quels besoins et attentes de vos collaborateurs souhaiteriez-vous agir en priorité ?",
       "options": [
         {
-          "text": "Livraison de repas",
-          "weights": { "Livraison de repas": 1, "Chèque cadeau": 0.5, "Tickets restaurants": 0.2 }
+          "text": "Des services du quotidien à portée de main",
+          "weights": { "Livraison de repas": 1, "Tickets restaurants": 1, "CESU": 1 }
         },
         {
-          "text": "Chèque cadeau",
-          "weights": { "Livraison de repas": 0.5, "Chèque cadeau": 1, "Tickets restaurants": 0.3 }
+          "text": "Lutter contre le dérèglement climatique",
+          "weights": { "Forfait mobilité durable": 1 }
         },
         {
-          "text": "Tickets restaurants",
-          "weights": { "Livraison de repas": 0.2, "Chèque cadeau": 0.3, "Tickets restaurants": 1 }
+          "text": "Passer du temps avec son nouveau-né sans souci financier",
+          "weights": { "Chèque-cadeau / Chèque-vacances": 1, "CESU": 1 }
         }
       ]
     },
     {
-      "question": "Quel est votre budget mensuel pour les avantages ?",
+      "question": "Sur quels besoins et attentes de vos collaborateurs souhaiteriez-vous agir en priorité ?",
       "options": [
         {
-          "text": "50€",
-          "weights": { "Livraison de repas": 0.5, "Chèque cadeau": 0.3, "Tickets restaurants": 0.2 }
+          "text": "Participer à des activités de bien-être (yoga, méditation, relaxation)",
+          "weights": { "Participation adhésion club de sport": 1, "Livraison de repas": 1}
         },
         {
-          "text": "100€",
-          "weights": { "Livraison de repas": 0.7, "Chèque cadeau": 0.5, "Tickets restaurants": 0.5 }
+          "text": "Accéder à des services trop coûteux dans l'immédiat",
+          "weights": { "Participation adhésion club de sport": 1, "Chèque-cadeau / Chèque-vacances": 1, "Forfait mobilité durable": 1, "Tickets restaurants": 1, "CESU": 1 }
         },
         {
-          "text": "150€",
-          "weights": { "Livraison de repas": 1, "Chèque cadeau": 0.8, "Tickets restaurants": 1 }
+          "text": "Une souplesse dans l'organisation pro-perso",
+          "weights": { "Livraison de repas": 1, "Tickets restaurants": 1, "CESU": 1 }
         }
       ]
     },
     {
-      "question": "Préférez-vous des avantages uniques ou récurrents ?",
+      "question": "Sur quels besoins et attentes de vos collaborateurs souhaiteriez-vous agir en priorité ?",
       "options": [
         {
-          "text": "Uniques",
-          "weights": { "Forfait mobilité durable": 0.6, "Tickets restaurants": 0.4, "CESU": 0.5 }
+          "text": "Etre en adéquation avec ses valeurs au quotidien",
+          "weights": { "Forfait mobilité durable": 1 }
         },
         {
-          "text": "Récurrents",
-          "weights": { "Forfait mobilité durable": 1, "Tickets restaurants": 1, "CESU": 1 }
+          "text": "Accéder facilement à des services de garde d'enfants",
+          "weights": { "CESU": 1, "Chèque-cadeau / Chèque-vacances": 1 }
         },
         {
-          "text": "Peu importe",
-          "weights": { "Forfait mobilité durable": 0.8, "Tickets restaurants": 0.8, "CESU": 0.8 }
+          "text": "Disposer de plus de temps pour des activités extra-professionnelles",
+          "weights": { "Participation adhésion club de sport": 1, "Livraison de repas": 1 }
         }
       ]
     }
   ],
-  "options": ["Livraison de repas", "Participation adhésion club de sport", "Chèque cadeau", "Forfait mobilité durable", "Tickets restaurants", "CESU"]
+  "options": ["Livraison de repas", "Participation adhésion club de sport", "Chèque-cadeau / Chèque-vacances", "Forfait mobilité durable", "Tickets restaurants", "CESU"]
 }
