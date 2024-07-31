@@ -158,12 +158,13 @@
         (acc, score) => acc + score,
         0
       );
+
       const percentages = data.options.map((option) => ({
         label: option,
         percentage: (scores[option] / totalScores) * 100,
       }));
 
-      await sleep(100); 
+      await sleep(100);
       displayGraph(percentages);
     }
 
@@ -212,6 +213,9 @@
           plugins: {
             legend: {
               display: false,
+            },
+            tooltip: {
+              enabled: false, // Disable tooltips completely
             },
           },
         },
@@ -269,9 +273,9 @@
     }
 
     function addContentToPDF(doc, results) {
-      let yPosition = 45;
-      const smallFontSize = 14;
-      const normalFontSize = 16;
+      let yPosition = 50;
+      const smallFontSize = 10;
+      const normalFontSize = 12;
 
       const img = new Image();
       img.src = './data/img.png';
@@ -284,7 +288,7 @@
 
         data.questions.forEach((question, index) => {
           doc.setFontSize(smallFontSize);
-          doc.text(15, yPosition, `Question ${index + 1}:`);
+          doc.text(20, yPosition, `Question ${index + 1}:`);
           doc.setFontSize(normalFontSize);
 
           let questionLines = doc.splitTextToSize(question.question, 160);
@@ -297,7 +301,7 @@
           }
 
           doc.setFontSize(smallFontSize);
-          doc.text(15, yPosition, `Réponse:`);
+          doc.text(20, yPosition, `Réponse:`);
           doc.setFontSize(normalFontSize);
 
           let answerLines = doc.splitTextToSize(

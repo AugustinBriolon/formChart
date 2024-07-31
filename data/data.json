@@ -10,7 +10,7 @@
         },
         {
           "text": "Des conseils en matière d'organisation du travail",
-          "weights": { "CESU": 1, "Tickets-restaurants": 1, "Livraison de repas": 1 }
+          "weights": { "CESU": 1, "Tickets restaurants": 1, "Livraison de repas": 1 }
         },
         {
           "text": "Adopter un comportement responsable et durable",
